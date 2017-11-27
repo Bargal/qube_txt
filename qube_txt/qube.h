@@ -14,7 +14,7 @@ public:
 
 	void qube::qubeIni(int p);			//inicjacja g³ówmna lokacji
 
-	qube::qube();
+	qube();
 
 	~qube();
 };
