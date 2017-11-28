@@ -20,7 +20,7 @@
     <ClInclude Include="qube.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="initialize.h">
+    <ClInclude Include="player.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -34,7 +34,7 @@
     <ClCompile Include="qube.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="initialize.cpp">
+    <ClCompile Include="player.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
