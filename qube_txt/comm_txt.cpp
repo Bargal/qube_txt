@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "main.cpp"
+#include "comm_txt.h"
 
 void txtMain()
 {

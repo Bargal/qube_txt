@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "main.cpp"
+#include "initialize.h"
 
 void  defineQ(gdata *p_allData, qube **p_p_matrix, int xM, int yM)
 {
