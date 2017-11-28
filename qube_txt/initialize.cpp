@@ -19,7 +19,7 @@ void  defineQ(gdata *p_allData, qube **p_p_matrix, int xM, int yM)
 	if (p_allData->hardMode) hardmode(p_allData, p_p_matrix, xM, yM);
 }
 
-void hardmode(gdata *p_allData, qube **p_p_matrix, int xM, int yM)
+void hardmode(gdata* p_allData, qube** p_p_matrix, int xM, int yM)
 {
 	for (int i = 1; i < (xM - 1); i++)
 		for (int j = 1; j < (yM - 1); j++)
@@ -29,7 +29,7 @@ void hardmode(gdata *p_allData, qube **p_p_matrix, int xM, int yM)
 		}
 }
 
-void hpTimeInit(gdata * p_allData)
+void hpTimeInit(gdata* p_allData)
 {
 	if (p_allData->hardMode)p_allData->hp = 40;			//zdrowie gracza
 	else p_allData->hp = 30;

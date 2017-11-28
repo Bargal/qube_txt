@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include "main.cpp"
 
 void txtMain()
 {
@@ -29,4 +30,25 @@ void txtInside(std::string in, std::string out)
 	std::cout << "\nzapamietaj to, bo od teraz podawany bedzie tylko numer pokoju w ktorym aktualnie jestes!" << std::endl;
 	std::cout << "\n\nWspinasz sie po drabince do pomieszczenia od ktorego zaczniesz gre,\ncelem jest dotrzec jak najszybciej do pomieszczenia z taka sama klapa w podlodze i wyjscie" << std::endl;
 	std::cout << "\n\nNacisnij dowolny klawisz" << std::endl;
+}
+
+void graphQ(gdata *p_allData, qube **p_p_matrix)
+{
+	if (p_p_matrix[p_allData->x][p_allData->y].exitQ[0]) std::cout << "  _|____*   *____|_  " << std::endl;
+	else std::cout << "  _|____*___*____|_  " << std::endl;
+	std::cout << "   |             |   " << std::endl;
+	std::cout << "   |             |   " << std::endl;
+	std::cout << "   *             *   " << std::endl;
+	if ((p_p_matrix[p_allData->x][p_allData->y].exitQ[1] && (p_p_matrix[p_allData->x][p_allData->y].exitQ[3]))) std::cout << "                     " << std::endl;
+	else if (p_p_matrix[p_allData->x][p_allData->y].exitQ[3]) std::cout << "                 |   " << std::endl;
+	else std::cout << "   |                 " << std::endl;
+	std::cout << "   *             *   " << std::endl;
+	std::cout << "   |             |   " << std::endl;
+	std::cout << "   |             |   " << std::endl;
+	if (p_p_matrix[p_allData->x][p_allData->y].exitQ[2]) std::cout << "  _|____     ____|_  " << std::endl;
+	else std::cout << "  _|____ ___ ____|_  " << std::endl;
+	std::cout << "   |    *   *    |   " << std::endl;
+
+	//if (p_allData->x == p_allData->startX && p_allData->y == p_allData->startY) std::cout << "\nw podloze widzisz klape przez ktora sie tu dostales";
+	//if (p_allData->x == p_allData->endX && p_allData->y == p_allData->endY) std::cout << "\n w podlodze widzisz nieznana klape, czyzby upragnione wyjscie??";
 }
