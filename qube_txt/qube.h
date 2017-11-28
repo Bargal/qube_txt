@@ -3,7 +3,7 @@
 /*
 *Klasa opisujaca podstawowa komorke gry w raz z danymi o stanie drzwi, opisem komorki, parametrami gry i jej numerem.
 */
-class qube				
+class qube
 {
 public:
 	std::string infoQ;	//opis tekstowy boxa
