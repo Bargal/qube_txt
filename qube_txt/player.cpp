@@ -19,22 +19,12 @@ player::player(int xM, int yM)
 
 int player::getMoveP() { return move; }
 void player::setMoveP(int x) { move = x; }
-
 int player::getStartX() { return positionInOut[0]; }
-void player::setStartX(int x) { positionInOut[0] = x; }
-
 int player::getStartY() { return positionInOut[1]; }
-void player::setStartY(int x) { positionInOut[1] = x; }
-
 int player::getEndX() { return positionInOut[2]; }
-void player::setEndX(int x) { positionInOut[2] = x; }
-
 int player::getEndY() { return positionInOut[3]; }
-void player::setEndY(int x) { positionInOut[3] = x; }
-
 int player::getActX() { return positionInOut[4]; }
 void player::setActX(int x) { positionInOut[4] = x; }
-
 int player::getActY() { return positionInOut[5]; }
 void player::setActY(int x) { positionInOut[5] = x; }
 

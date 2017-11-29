@@ -5,16 +5,25 @@
 */
 class qube
 {
-public:
 	std::string infoQ;	//opis tekstowy boxa
 	int hpQ;			//obrazenia lub leczenie (hp+ hp-)
-	bool exitQ[4];		//tablica wyjsc | 0-W | 1-D | 2-S | 3-A
 	int timeQ;			//zmienna rund zabieranych przez box
 	int beInsideQ;		//licznik ilosci pobytow w boxie
+	bool exitQ[4];		//tablica wyjsc | 0-W | 1-D | 2-S | 3-A
 
-	void qube::qubeIni(int p);			//inicjacja g³ówmna lokacji
+public:
 
 	qube();
+
+	void qubeIni(int);			//inicjacja g³ówmna lokacji
+
+	std::string getInfoQ();
+	int getHpQ();
+	int getTimeQ();
+	int getBeInsideQ();
+	void setBeInsideQ(int);
+	void setExitQ(int, bool);
+	bool getExitQ(int);
 
 	~qube();
 };

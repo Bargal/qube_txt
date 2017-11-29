@@ -15,9 +15,17 @@ void qube::qubeIni(int p)						//inicjacja g³ówmna lokacji
 {
 	infoQ = "pokoj numer  ";					//opis pokoju - moze z pliku
 	infoQ += std::to_string(p); p++;			//numer pokoju
-	hpQ = (std::rand() % 5) - 2;				//losowe okreslenie obrazem lub leczenia w zakresie +/-2
+	hpQ = (std::rand() % 5) - 2;				//losowe okreslenie obrazeñ lub leczenia w zakresie +/-2
 	timeQ = (std::rand() % 4) + hpQ;			//Im bezpieczniej, tym czas szybciej idzie
 }
+
+std::string qube::getInfoQ() { return infoQ; }
+int qube::getHpQ() { return hpQ; }
+int qube::getTimeQ() { return timeQ; }
+int qube::getBeInsideQ() { return beInsideQ; }
+void qube::setBeInsideQ(int x) { beInsideQ = x; }
+void qube::setExitQ(int x, bool a) { exitQ[x] = a; }
+bool qube::getExitQ(int x) { return exitQ[x]; }
 
 qube::~qube()
 {
