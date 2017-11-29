@@ -1,30 +1,47 @@
 #pragma once
+/*
+*klasa opisuj¹ca parametry gracza i aktualnego stanu gry
+*/
 class player
 {
 public:
 	int timer;		//deklaracja ilosci rund
 	int hp;			//zdrowie gracza
 	int mov;		//ilosc skoñczonych rund
-	int startX;		//pozycja startowa
-	int startY;		//pozycja startowa
-	int endX;		//wyjscie
-	int endY;		//wyjscie
 	int endgame;	//znacznik koñca gry
 	bool hardMode;	//tryb gry poczatkujacy/ekspert
 
-	int x;			//aktualna wspó³rzêdna x
-	int y;			//aktualna wspó³rzêdna Y
-	
+	//int x;			//aktualna wspó³rzêdna x
+	//int y;			//aktualna wspó³rzêdna Y
+
+	//konstruktor (rozmiar planszy x,y)
 	player(int, int);
-	//Wysy³anie wartoœci ostatnio wprowadzonego ruchu
-	int moveP(); 
+
+	// operacje na zmiennych obiektu
+
+//Wysy³anie wartoœci ostatnio wprowadzonego ruchu
+	int getMoveP();
 	//Wprowadzanie wartoœci ostatnio wprowadzonego ruchu
-	void moveP(int);
-	
+	void setMoveP(int);
+
+	// wprowadzanie i wysy³anie wartoœci tablicy pozycji w grze
+
+	int getStartX();
+	void setStartX(int);
+	int getStartY();
+	void setStartY(int);
+	int getEndX();
+	void setEndX(int);
+	int getEndY();
+	void setEndY(int);
+	int getActX();
+	void setActX(int);
+	int getActY();
+	void setActY(int);
+
 	~player();
 
 private:
 	int move;		//oznacznik ruchu
-
+	int positionInOut[6];  //tablica pozycji startowej i koñcowej: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
 };
-
