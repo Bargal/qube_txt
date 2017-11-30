@@ -14,15 +14,15 @@ class qube
 public:
 
 	qube();
-
-	void qubeIni(int);			//inicjacja g³ówmna lokacji
-
+	//inicjacja g³ówmna lokacji
+	void qubeIni(int);
+	//getters
 	std::string getInfoQ();
 	int getHpQ();
 	int getTimeQ();
 	int getBeInsideQ();
 	bool getExitQ(int);
-
+	//setters
 	void setBeInsideQ(int);
 	void setExitQ(int, bool);
 
