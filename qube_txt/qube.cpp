@@ -23,9 +23,10 @@ std::string qube::getInfoQ() { return infoQ; }
 int qube::getHpQ() { return hpQ; }
 int qube::getTimeQ() { return timeQ; }
 int qube::getBeInsideQ() { return beInsideQ; }
+bool qube::getExitQ(int x) { return exitQ[x]; }
+
 void qube::setBeInsideQ(int x) { beInsideQ = x; }
 void qube::setExitQ(int x, bool a) { exitQ[x] = a; }
-bool qube::getExitQ(int x) { return exitQ[x]; }
 
 qube::~qube()
 {

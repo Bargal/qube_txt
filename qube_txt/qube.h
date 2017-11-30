@@ -21,9 +21,10 @@ public:
 	int getHpQ();
 	int getTimeQ();
 	int getBeInsideQ();
+	bool getExitQ(int);
+
 	void setBeInsideQ(int);
 	void setExitQ(int, bool);
-	bool getExitQ(int);
 
 	~qube();
 };

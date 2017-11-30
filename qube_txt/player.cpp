@@ -18,15 +18,26 @@ player::player(int xM, int yM)
 }
 
 int player::getMoveP() { return move; }
-void player::setMoveP(int x) { move = x; }
 int player::getStartX() { return positionInOut[0]; }
 int player::getStartY() { return positionInOut[1]; }
 int player::getEndX() { return positionInOut[2]; }
 int player::getEndY() { return positionInOut[3]; }
 int player::getActX() { return positionInOut[4]; }
-void player::setActX(int x) { positionInOut[4] = x; }
 int player::getActY() { return positionInOut[5]; }
+int player::getTimer() { return timer; }
+int player::getHp() { return hp; }
+int player::getMov() { return mov; }
+int player::getEndgame() { return endgame; }
+bool player::getHardMode() { return hardMode; }
+
+void player::setMoveP(int x) { move = x; }
 void player::setActY(int x) { positionInOut[5] = x; }
+void player::setActX(int x) { positionInOut[4] = x; }
+void player::setTimer(int x) { timer = x; }
+void player::setHp(int x) { hp = x; }
+void player::setMov(int x) { mov = x; }
+void player::setEndgame(int x) { endgame = x; }
+void player::setHardMode(bool x) { hardMode = x; }
 
 player::~player()
 {
