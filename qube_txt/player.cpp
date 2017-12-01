@@ -64,7 +64,7 @@ int player::move()
 	else if (getMoveP() == 4) return 3;
 	else if (getMoveP() == 5) return 0;
 	else if (getMoveP() == 6) return 2;
-	else return 9;
+	return 0;
 }
 
 int player::getMoveP() { return moveP; }
