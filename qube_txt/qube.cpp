@@ -3,6 +3,7 @@
 #include <iostream>
 
 qube::qube()
+
 {
 	beInsideQ = 1;
 	exitQ[0] = true;
@@ -11,12 +12,12 @@ qube::qube()
 	exitQ[3] = true;
 }
 
-void qube::qubeIni(int p)						//inicjacja g³ówmna lokacji
+void qube::qubeIni(int p) //inicjacja g³ówmna lokacji
 {
-	infoQ = "pokoj numer  ";					//opis pokoju - moze z pliku
-	infoQ += std::to_string(p); p++;			//numer pokoju
-	hpQ = (std::rand() % 5) - 2;				//losowe okreslenie obrazeñ lub leczenia w zakresie +/-2
-	timeQ = (std::rand() % 4) + hpQ;			//Im bezpieczniej, tym czas szybciej idzie
+	infoQ = "pokoj numer  "; //opis pokoju - moze z pliku
+	infoQ += std::to_string(p);
+	hpQ = (rand() % 5) - 2; //losowe okreslenie obrazeñ lub leczenia w zakresie +/-2
+	timeQ = (rand() % 4) + hpQ; //Im bezpieczniej, tym czas szybciej idzie
 }
 
 std::string qube::getInfoQ() { return infoQ; }
