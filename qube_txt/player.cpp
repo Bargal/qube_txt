@@ -32,9 +32,9 @@ int player::gameOver()
 	system("cls");
 	std::cout << "    HP  " << getHp() << "   zakonczone rundy  " << getMov() << "    Pozostalo czasu  "
 		<< getTimer() - getMov() << std::endl << std::endl;
-	if (getEndgame() == 1) std::cout << "\nNiestety twoje zdrowie spadlo do zera... umarles :) ";
-	if (getEndgame() == 2) std::cout << "\nUciekasz wyjsciem bezpieczenstwa przed zakonczeniem zadania.";
-	if (getEndgame() == 4) std::cout << "\nNiestety koniec czasu - przegrales.";
+	if (getEndgame() == 1) std::cout << "\nNiestety twoje zdrowie spadlo do zera... umarles :) " << std::endl;
+	if (getEndgame() == 2) std::cout << "\nUciekasz wyjsciem bezpieczenstwa przed zakonczeniem zadania." << std::endl;
+	if (getEndgame() == 4) std::cout << "\nNiestety koniec czasu - przegrales." << std::endl;
 	if (getEndgame() == 3)
 	{
 		std::cout << "\n\nGRATULACJE udalo ci sie wygrac !!!!";
@@ -65,6 +65,7 @@ int player::move()
 	else if (getMoveP() == 5) return 0;
 	else if (getMoveP() == 6) return 2;
 	else return 9;
+	return 0;
 }
 
 int player::getMoveP() { return moveP; }

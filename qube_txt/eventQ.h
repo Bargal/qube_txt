@@ -5,6 +5,7 @@
 */
 class eventQ
 {
+	int typeE; //rodzaj eventu 0-potwor 1-przyjaciel 2-skrzynka
 	int hpE; //wytrzyma³oœæ obiektu
 	int siE; //si³a obiektu (przeciwnik)
 	int chestHpE; //dodatek ¿ycia (skrzynka)
