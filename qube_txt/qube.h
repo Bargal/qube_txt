@@ -2,7 +2,8 @@
 #include <string>
 
 /*
-*Klasa opisujaca podstawowa komorke gry w raz z danymi o stanie drzwi, opisem komorki, parametrami gry i jej numerem.
+* Klasa opisujaca podstawowa komorke gry w raz z danymi o stanie drzwi, opisem komorki, parametrami gry i jej numerem.
+* docelowo maskymalna automatyzacja czynnoœci zwi¹zanych z tworzeniem pomieszczenia/obszaru oraz mo¿liwoœc bezkolizyjnego dodawania nowych funkcji
 */
 class qube
 {

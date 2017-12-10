@@ -1,6 +1,8 @@
 #pragma once
 /*
-*klasa opisuj¹ca parametry gracza i aktualnego stanu gry
+*  klasa opisuj¹ca parametry gracza i aktualnego stanu gry
+*  docelowo minimalizacja setterów i getterów i wprowadzenie na ich miejsce metod bardziej rozbudowanych i kompleksowych 
+*  (wycofanie czêœci operacji z funkcji g³ównego programu)
 */
 class player
 {

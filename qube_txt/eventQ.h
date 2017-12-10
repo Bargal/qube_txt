@@ -1,5 +1,8 @@
 #pragma once
-//wydarzenie podczas gry.
+/* wydarzenie podczas gry.
+*  Tworzenie wroga lub skrzynki które posiadaj¹ czêœæ cech wspólnych a czêœæ w³asnych
+*  (nauka dzidziczenia i zaprzyjaŸniania klas)
+*/
 class eventQ
 {
 	int hpE; //wytrzyma³oœæ obiektu
