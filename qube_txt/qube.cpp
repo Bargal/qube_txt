@@ -12,12 +12,12 @@ qube::qube()
 	exitQ[3] = true;
 }
 
-void qube::qubeIni(int p) //inicjacja g³ówmna lokacji
+void qube::qubeIni(int p) //main initiation of the location
 {
-	infoQ = "pokoj numer  "; //opis pokoju - moze z pliku
+	infoQ = "pokoj numer  "; //room description -in future maybe from a file
 	infoQ += std::to_string(p);
-	hpQ = (rand() % 5) - 2; //losowe okreslenie obrazeñ lub leczenia w zakresie +/-2
-	timeQ = (rand() % 4) + hpQ; //Im bezpieczniej, tym czas szybciej idzie
+	hpQ = (rand() % 5) - 2; //random determination of injuries or treatment in the +/- 2 range
+	timeQ = (rand() % 4) + hpQ; // The safer it is, the faster time goes
 }
 
 std::string qube::getInfoQ() { return infoQ; }

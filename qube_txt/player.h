@@ -1,29 +1,29 @@
 #pragma once
 /*
-*  klasa opisuj¹ca parametry gracza i aktualnego stanu gry
-*  docelowo minimalizacja setterów i getterów i wprowadzenie na ich miejsce metod bardziej rozbudowanych i kompleksowych 
-*  (wycofanie czêœci operacji z funkcji g³ównego programu)
+* a class describing the player's parameters and the current state of the game
+* ultimately, the minimization of setters and getters and the introduction of more complex and comprehensive methods
+* (withdrawal of part of the operation from the main program function)
 */
 class player
 {
-	int moveP;		//oznacznik ruchu
-	int positionInOut[6];  //tablica pozycji startowej i koñcowej: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
-	int timer;		//deklaracja ilosci rund
-	int hp;			//zdrowie gracza
-	int mov;		//ilosc skoñczonych rund
-	int endgame;	//znacznik koñca gry
-	bool hardMode;	//tryb gry poczatkujacy/ekspert
+	int moveP;		//move marker
+	int positionInOut[6];  //Start and end position table: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
+	int timer;		//declaration of the number of rounds
+	int hp;			//player health
+	int mov;		//number of finite rounds
+	int endgame;	//end of game marker
+	bool hardMode;	//Beginner / expert game mode
 	//setters private
 	void setTimer(int);
 
 public:
-	//konstruktor (rozmiar planszy x,y)
+	//constructor (board size x, y)
 	player(int, int);
-	//ustawianie czasu i zdrowia w zale¿noœci od trudnoœci gry
+	//setting time and health depending on the difficulty of the game
 	void hpTimeInit();
-	//realizacja ruchu gracza
+	//implementation of the player's movement
 	int move();
-	//koniec rozgrywki
+	//end of the game
 	int gameOver();
 
 	// getters

@@ -6,25 +6,25 @@
 
 player::player(int xM, int yM)
 {
-	mov = 0;				//ilosc skoñczonych rund
+	mov = 0;				//number of finite rounds
 	int rndX = (xM / 3);
 	int rndY = (yM / 3);
 
-	positionInOut[0] = (std::rand() % rndX);				//pozycja startowa
-	positionInOut[1] = (std::rand() % rndY);				//pozycja startowa
-	positionInOut[2] = (std::rand() % rndX) + (rndX * 2);	//wyjscie
-	positionInOut[3] = (std::rand() % rndY) + (rndY * 2);	//wyjscie
-	endgame = 0;								//znacznik koñca gry
+	positionInOut[0] = (std::rand() % rndX);				//starting position
+	positionInOut[1] = (std::rand() % rndY);				//starting position
+	positionInOut[2] = (std::rand() % rndX) + (rndX * 2);	//exit position
+	positionInOut[3] = (std::rand() % rndY) + (rndY * 2);	//exit position
+	endgame = 0;								//end of game marker
 	positionInOut[4] = positionInOut[0];
 	positionInOut[5] = positionInOut[1];
 }
 
 void player::hpTimeInit()
 {
-	if (getHardMode())setHp(40);			//zdrowie gracza
+	if (getHardMode())setHp(40);			//player health
 	else setHp(30);
 
-	if (getHardMode())setTimer(150);		// deklaracja ilosci rund
+	if (getHardMode())setTimer(150);		// declaration of the number of rounds
 	else setTimer(30);
 }
 int player::gameOver()

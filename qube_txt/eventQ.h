@@ -1,30 +1,33 @@
 #pragma once
-/* wydarzenie podczas gry.
-*  Tworzenie wroga lub skrzynki które posiadaj¹ czêœæ cech wspólnych a czêœæ w³asnych
-*  (nauka dzidziczenia i zaprzyjaŸniania klas)
+/* event during the game.
+* Create an enemy or crate that have some of the common features and part of their own
+* (learning how to classify and make friends)
 */
 class eventQ
 {
-	int typeE; //rodzaj eventu 0-potwor 1-przyjaciel 2-skrzynka
-	int hpE; //wytrzyma³oœæ obiektu
-	int siE; //si³a obiektu (przeciwnik)
-	int chestHpE; //dodatek ¿ycia (skrzynka)
-	bool keyE; //czy obiekt ma klucz?
-	bool friendE; //czy obiekt jest przyjazny/skrzynka otwarta (true) czy wrogi/zamkniêta
+	int typeE; //type of event 0-enemy 1-friend 2-box
+	int hpE; //endurance of the object
+	int siE; //strength of the object (opponent)
+	int chestHpE; //extra life (box)
+	bool keyE; //does the object have a key?
+	bool friendE; //if the object is friendly / open box (true) or hostile / closed
 
-	void createChest(); //tworzenie skrzynki
-	void createMob(); //tworzenie potwora
+	//creating a box
+	void createChest();
+	//creating enemy/friend
+	void createMob();
 
 public:
-	//getter zmiennej keyE
+	//getter of keyE variable
 	bool getKey();
-	//tworzy nowy event losowy
-	void create();
-	//wyœwietla info tekstowe o evencie oraz przyjmuje i wyœwietla klawisz interakcji z eventem
+	//creates a new random event
+	void create(int);
+	//displays the text info about the event and accepts and displays the interaction key with the event
 	void info(char);
-	//wykonuje akcje zwi¹zan¹ z aktualnym eventem - do ogarniêcia czy int czy void i przyjmowane argumenty (mo¿e nie konieczne)
+	//performs actions related to the current event - to comprehend whether int or void and accepted arguments (maybe not necessary)
 	int action(int);
 
 	eventQ();
+	eventQ(int); //determining the difficulty
 	~eventQ();
 };

@@ -2,21 +2,21 @@
 #include <string>
 
 /*
-* Klasa opisujaca podstawowa komorke gry w raz z danymi o stanie drzwi, opisem komorki, parametrami gry i jej numerem.
-* docelowo maskymalna automatyzacja czynnoœci zwi¹zanych z tworzeniem pomieszczenia/obszaru oraz mo¿liwoœc bezkolizyjnego dodawania nowych funkcji
+* A class describing the basic game cell at once with data on the status of the door, description of the cell, game parameters and its number.
+* the ultimate masking automation of activities related to the creation of a room / area and the possibility of collision-free adding new functions
 */
 class qube
 {
-	std::string infoQ; //opis tekstowy boxa
-	int hpQ; //obrazenia lub leczenie (hp+ hp-)
-	int timeQ; //zmienna rund zabieranych przez box
-	int beInsideQ; //licznik ilosci pobytow w boxie
-	bool exitQ[4]; //tablica wyjsc | 0-W | 1-D | 2-S | 3-A
+	std::string infoQ; //text description of the box
+	int hpQ; //injury or treatment (hp + hp-)
+	int timeQ; //variable of rounds picked up by the box
+	int beInsideQ; //counter for the number of stays in the box
+	bool exitQ[4]; //exit table | 0-W | 1-D | 2-S | 3-A
 
 public:
 
 	qube();
-	//inicjacja g³ówmna lokacji
+	//main initiation of the location
 	void qubeIni(int);
 	//getters
 	std::string getInfoQ();
