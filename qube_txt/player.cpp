@@ -4,17 +4,17 @@
 #include <iostream>
 #include <conio.h>
 
-player::player(int xM, int yM)
+player::player(int xM, int yM) : moveP(0), timer(0), hp(0), hardMode(false)
 {
-	mov = 0;				//number of finite rounds
+	mov = 0; //number of finite rounds
 	int rndX = (xM / 3);
 	int rndY = (yM / 3);
 
-	positionInOut[0] = (std::rand() % rndX);				//starting position
-	positionInOut[1] = (std::rand() % rndY);				//starting position
-	positionInOut[2] = (std::rand() % rndX) + (rndX * 2);	//exit position
-	positionInOut[3] = (std::rand() % rndY) + (rndY * 2);	//exit position
-	endgame = 0;								//end of game marker
+	positionInOut[0] = (std::rand() % rndX); //starting position
+	positionInOut[1] = (std::rand() % rndY); //starting position
+	positionInOut[2] = (std::rand() % rndX) + (rndX * 2); //exit position
+	positionInOut[3] = (std::rand() % rndY) + (rndY * 2); //exit position
+	endgame = 0; //end of game marker
 	positionInOut[4] = positionInOut[0];
 	positionInOut[5] = positionInOut[1];
 }
@@ -41,11 +41,10 @@ int player::gameOver()
 		std::cout << "\nuzyskales " << getHp() / 2 + (getTimer() - getMov()) << " punktow" << std::endl;
 	}
 	std::cout << "\nKoniec gry nacisnij Q\nponowna gra nacisnij E" << std::endl;
-	int tst = 0;
+	int tst;
 	do
 	{
-		char a = 0;
-		a = _getch();
+		char a = _getch();
 		if (a == 'e' || a == 'E')return 0;
 		else if (a == 'q' || a == 'Q')return 1;
 		else tst = 1;
@@ -54,8 +53,8 @@ int player::gameOver()
 }
 int player::move()
 {
-	int x = getActX();
-	int y = getActY();
+	auto x = getActX();
+	auto y = getActY();
 
 	if (getMoveP() == 0) { --x; setActX(x); }
 	else if (getMoveP() == 1) { ++y; setActY(y); }

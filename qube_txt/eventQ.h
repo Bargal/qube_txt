@@ -1,7 +1,6 @@
 #pragma once
 /* event during the game.
 * Create an enemy or crate that have some of the common features and part of their own
-* (learning how to classify and make friends)
 */
 class eventQ
 {

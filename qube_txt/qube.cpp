@@ -2,8 +2,7 @@
 #include "qube.h"
 #include <iostream>
 
-qube::qube()
-
+qube::qube() : hpQ(0), timeQ(0)
 {
 	beInsideQ = 1;
 	exitQ[0] = true;
