@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <conio.h>
+#include "ScoreBoard.h"
 
 Player::Player(int xM, int yM) : moveP(0), timer(0), hp(0), hardMode(false)
 {
@@ -37,8 +38,15 @@ int Player::gameOver()
 	if (getEndgame() == 4) std::cout << "\nNiestety koniec czasu - przegrales." << std::endl;
 	if (getEndgame() == 3)
 	{
-		std::cout << "\n\nGRATULACJE udalo ci sie wygrac !!!!";
-		std::cout << "\nuzyskales " << getHp() / 2 + (getTimer() - getMov()) << " punktow" << std::endl;
+		std::cout << "\n\nGRATULACJE udalo ci sie wygrac !!!!" << std::endl;
+
+		if (hardMode)
+		{
+			ScoreBoard scoreQ;
+			scoreQ.showScoreBoard((getHp() / 2 + (getTimer() - getMov())));
+		}
+		else
+			std::cout << "\nuzyskales " << getHp() / 2 + (getTimer() - getMov()) << " punktow" << std::endl;
 	}
 	std::cout << "\nKoniec gry nacisnij Q\nponowna gra nacisnij E" << std::endl;
 	int tst;
