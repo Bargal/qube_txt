@@ -2,7 +2,7 @@
 /* event during the game.
 * Create an enemy or crate that have some of the common features and part of their own
 */
-class eventQ
+class EventQ
 {
 	int typeE; //type of event 0-enemy 1-friend 2-box
 	int hpE; //endurance of the object
@@ -26,7 +26,7 @@ public:
 	//performs actions related to the current event - to comprehend whether int or void and accepted arguments (maybe not necessary)
 	int action(int);
 
-	eventQ();
-	eventQ(int); //determining the difficulty
-	~eventQ();
+	EventQ();
+	EventQ(int); //determining the difficulty
+	~EventQ();
 };
