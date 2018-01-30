@@ -5,11 +5,10 @@
 #include <conio.h>
 #include "ScoreBoard.h"
 
-Player::Player(int xM, int yM) : moveP(0), timer(0), hp(0), hardMode(false)
+Player::Player(const int xM, const int yM) : moveP(0), timer(0), hp(0), mov(0), hardMode(false)
 {
-	mov = 0; //number of finite rounds
-	int rndX = (xM / 3);
-	int rndY = (yM / 3);
+	const int rndX = (xM / 3);
+	const int rndY = (yM / 3);
 
 	positionInOut[0] = (std::rand() % rndX); //starting position
 	positionInOut[1] = (std::rand() % rndY); //starting position

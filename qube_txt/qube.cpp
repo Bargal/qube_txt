@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "qube.h"
-#include <iostream>
 
 Qube::Qube() : hpQ(0), timeQ(0)
 {
@@ -13,10 +12,10 @@ Qube::Qube() : hpQ(0), timeQ(0)
 
 void Qube::qubeIni(int p) //main initiation of the location
 {
-	infoQ = "pokoj numer  "; //room description -in future maybe from a file
+	infoQ = "pokoj numer  "; //room description
 	infoQ += std::to_string(p);
 	hpQ = (rand() % 5) - 2; //random determination of injuries or treatment in the +/- 2 range
-	timeQ = (rand() % 4) + hpQ; // The safer it is, the faster time goes
+	timeQ = (rand() % 4) + hpQ; // Then safer it is, then faster time goes
 }
 
 std::string Qube::getInfoQ() { return infoQ; }
