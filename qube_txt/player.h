@@ -4,7 +4,7 @@
 * ultimately, the minimization of setters and getters and the introduction of more complex and comprehensive methods
 * (withdrawal of part of the operation from the main program function)
 */
-class Player
+class player
 {
 	int moveP;		//move marker
 	int positionInOut[6];  //Start and end position table: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
@@ -18,7 +18,7 @@ class Player
 
 public:
 	//constructor (board size x, y)
-	Player(int, int);
+	player(int, int);
 	//setting time and health depending on the difficulty of the game
 	void hpTimeInit();
 	//implementation of the player's movement
@@ -48,5 +48,5 @@ public:
 	void setEndgame(int);
 	void setHardMode(bool);
 
-	~Player();
+	~player();
 };

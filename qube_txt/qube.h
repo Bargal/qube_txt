@@ -5,7 +5,7 @@
 * A class describing the basic game cell at once with data on the status of the door, description of the cell, game parameters and its number.
 * the ultimate masking automation of activities related to the creation of a room / area and the possibility of collision-free adding new functions
 */
-class Qube
+class qube
 {
 	std::string infoQ; //text description of the box
 	int hpQ; //injury or treatment (hp + hp-)
@@ -15,7 +15,7 @@ class Qube
 
 public:
 
-	Qube();
+	qube();
 	//main initiation of the location
 	void qubeIni(int);
 	//getters
@@ -28,5 +28,5 @@ public:
 	void setBeInsideQ(int);
 	void setExitQ(int, bool);
 
-	~Qube();
+	~qube();
 };

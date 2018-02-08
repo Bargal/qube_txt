@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "qube.h"
 
-Qube::Qube() : hpQ(0), timeQ(0)
+qube::qube() : hpQ(0), timeQ(0)
 {
 	beInsideQ = 1;
 	exitQ[0] = true;
@@ -10,7 +10,7 @@ Qube::Qube() : hpQ(0), timeQ(0)
 	exitQ[3] = true;
 }
 
-void Qube::qubeIni(int p) //main initiation of the location
+void qube::qubeIni(int p) //main initiation of the location
 {
 	infoQ = "pokoj numer  "; //room description
 	infoQ += std::to_string(p);
@@ -18,15 +18,15 @@ void Qube::qubeIni(int p) //main initiation of the location
 	timeQ = (rand() % 4) + hpQ; // Then safer it is, then faster time goes
 }
 
-std::string Qube::getInfoQ() { return infoQ; }
-int Qube::getHpQ() { return hpQ; }
-int Qube::getTimeQ() { return timeQ; }
-int Qube::getBeInsideQ() { return beInsideQ; }
-bool Qube::getExitQ(int x) { return exitQ[x]; }
+std::string qube::getInfoQ() { return infoQ; }
+int qube::getHpQ() { return hpQ; }
+int qube::getTimeQ() { return timeQ; }
+int qube::getBeInsideQ() { return beInsideQ; }
+bool qube::getExitQ(int x) { return exitQ[x]; }
 
-void Qube::setBeInsideQ(int x) { beInsideQ = x; }
-void Qube::setExitQ(int x, bool a) { exitQ[x] = a; }
+void qube::setBeInsideQ(int x) { beInsideQ = x; }
+void qube::setExitQ(int x, bool a) { exitQ[x] = a; }
 
-Qube::~Qube()
+qube::~qube()
 {
 }

@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-ScoreBoard::ScoreBoard() : filestatus(true)
+score_board::score_board() : filestatus(true)
 {
 	std::ifstream scoreFile("score.dat");
 	if (!scoreFile.is_open())
@@ -37,7 +37,7 @@ ScoreBoard::ScoreBoard() : filestatus(true)
 	}
 }
 
-ScoreBoard::~ScoreBoard()
+score_board::~score_board()
 {
 	std::ofstream scoreFile("score.dat");
 	if (!scoreFile.is_open())
@@ -52,7 +52,7 @@ ScoreBoard::~ScoreBoard()
 	scoreFile.close();
 }
 
-void ScoreBoard::showScoreBoard(const int current)
+void score_board::showScoreBoard(const int current)
 {
 	if (filestatus)
 	{

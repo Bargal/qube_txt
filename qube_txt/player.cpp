@@ -5,7 +5,7 @@
 #include <conio.h>
 #include "ScoreBoard.h"
 
-Player::Player(const int xM, const int yM) : moveP(0), timer(0), hp(0), mov(0), hardMode(false)
+player::player(const int xM, const int yM) : moveP(0), timer(0), hp(0), mov(0), hardMode(false)
 {
 	const int rndX = (xM / 3);
 	const int rndY = (yM / 3);
@@ -19,7 +19,7 @@ Player::Player(const int xM, const int yM) : moveP(0), timer(0), hp(0), mov(0), 
 	positionInOut[5] = positionInOut[1];
 }
 
-void Player::hpTimeInit()
+void player::hpTimeInit()
 {
 	if (getHardMode())setHp(40);			//player health
 	else setHp(30);
@@ -27,7 +27,7 @@ void Player::hpTimeInit()
 	if (getHardMode())setTimer(150);		// declaration of the number of rounds
 	else setTimer(30);
 }
-int Player::gameOver()
+int player::gameOver()
 {
 	system("cls");
 	std::cout << "    HP  " << getHp() << "   zakonczone rundy  " << getMov() << "    Pozostalo czasu  "
@@ -41,7 +41,7 @@ int Player::gameOver()
 
 		if (hardMode)
 		{
-			ScoreBoard scoreQ;
+			score_board scoreQ;
 			scoreQ.showScoreBoard((getHp() / 2 + (getTimer() - getMov())));
 		}
 		else
@@ -58,7 +58,7 @@ int Player::gameOver()
 	} while (tst == 1);
 	return 1;
 }
-int Player::move()
+int player::move()
 {
 	auto x = getActX();
 	auto y = getActY();
@@ -74,28 +74,28 @@ int Player::move()
 	return 0;
 }
 
-int Player::getMoveP() { return moveP; }
-int Player::getStartX() { return positionInOut[0]; }
-int Player::getStartY() { return positionInOut[1]; }
-int Player::getEndX() { return positionInOut[2]; }
-int Player::getEndY() { return positionInOut[3]; }
-int Player::getActX() { return positionInOut[4]; }
-int Player::getActY() { return positionInOut[5]; }
-int Player::getTimer() { return timer; }
-int Player::getHp() { return hp; }
-int Player::getMov() { return mov; }
-int Player::getEndgame() { return endgame; }
-bool Player::getHardMode() { return hardMode; }
+int player::getMoveP() { return moveP; }
+int player::getStartX() { return positionInOut[0]; }
+int player::getStartY() { return positionInOut[1]; }
+int player::getEndX() { return positionInOut[2]; }
+int player::getEndY() { return positionInOut[3]; }
+int player::getActX() { return positionInOut[4]; }
+int player::getActY() { return positionInOut[5]; }
+int player::getTimer() { return timer; }
+int player::getHp() { return hp; }
+int player::getMov() { return mov; }
+int player::getEndgame() { return endgame; }
+bool player::getHardMode() { return hardMode; }
 
-void Player::setMoveP(int x) { moveP = x; }
-void Player::setActY(int x) { positionInOut[5] = x; }
-void Player::setActX(int x) { positionInOut[4] = x; }
-void Player::setTimer(int x) { timer = x; }
-void Player::setHp(int x) { hp = x; }
-void Player::setMov(int x) { mov = x; }
-void Player::setEndgame(int x) { endgame = x; }
-void Player::setHardMode(bool x) { hardMode = x; }
+void player::setMoveP(int x) { moveP = x; }
+void player::setActY(int x) { positionInOut[5] = x; }
+void player::setActX(int x) { positionInOut[4] = x; }
+void player::setTimer(int x) { timer = x; }
+void player::setHp(int x) { hp = x; }
+void player::setMov(int x) { mov = x; }
+void player::setEndgame(int x) { endgame = x; }
+void player::setHardMode(bool x) { hardMode = x; }
 
-Player::~Player()
+player::~player()
 {
 }
