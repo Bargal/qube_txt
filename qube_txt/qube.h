@@ -11,7 +11,7 @@ class qube
 	int hpQ; //injury or treatment (hp + hp-)
 	int timeQ; //variable of rounds picked up by the box
 	int beInsideQ; //counter for the number of stays in the box
-	bool exitQ[4]; //exit table | 0-W | 1-D | 2-S | 3-A
+	bool exitQ[4]{}; //exit table | 0-W | 1-D | 2-S | 3-A
 
 public:
 

@@ -7,7 +7,7 @@
 class player
 {
 	int moveP;		//move marker
-	int positionInOut[6];  //Start and end position table: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
+	int positionInOut[6]{};  //Start and end position table: 0-startX, 1-startY, 2-endX, 3-endY, 4 actX, 5 actY
 	int timer;		//declaration of the number of rounds
 	int hp;			//player health
 	int mov;		//number of finite rounds
