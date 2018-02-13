@@ -14,12 +14,10 @@ void eventQ::createMob()
 
 void eventQ::create(const int r)
 {
-
 }
 
 void eventQ::info(char)
 {
-
 }
 
 int eventQ::action(int)

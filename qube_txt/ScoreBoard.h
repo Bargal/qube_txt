@@ -5,7 +5,7 @@
  */
 class score_board
 {
-	int score[10]; //table of top 10 game scores
+	int score[10]{}; //table of top 10 game scores
 	bool filestatus; //file read status
 
 public:
