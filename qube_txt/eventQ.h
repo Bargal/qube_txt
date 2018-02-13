@@ -6,7 +6,7 @@ class eventQ
 {
 	int typeE; //type of event 0-enemy 1-friend 2-box
 	int hpE; //endurance of the object
-	int siE; //strength of the object (opponent)
+	int strE; //strength of the object (opponent)
 	int chestHpE; //extra life (box)
 	bool keyE; //does the object have a key?
 	bool friendE; //if the object is friendly / open box (true) or hostile / closed
