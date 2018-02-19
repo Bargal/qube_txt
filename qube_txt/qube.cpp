@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "qube.h"
 
-qube::qube() : hpQ(0), timeQ(0)
+qube::qube() : hpQ(0), timeQ(0), eventType(-1)
 {
 	beInsideQ = 1;
 	exitQ[0] = true;
@@ -22,10 +22,13 @@ std::string qube::getInfoQ() { return infoQ; }
 int qube::getHpQ() { return hpQ; }
 int qube::getTimeQ() { return timeQ; }
 int qube::getBeInsideQ() { return beInsideQ; }
+int qube::getEvent() { return eventType; }
+
 bool qube::getExitQ(int x) { return exitQ[x]; }
 
 void qube::setBeInsideQ(int x) { beInsideQ = x; }
 void qube::setExitQ(int x, bool a) { exitQ[x] = a; }
+void qube::setEvent(int x) { eventType = x; }
 
 qube::~qube()
 {

@@ -11,6 +11,7 @@ class qube
 	int hpQ; //injury or treatment (hp + hp-)
 	int timeQ; //variable of rounds picked up by the box
 	int beInsideQ; //counter for the number of stays in the box
+	int eventType; //type of event in current room.
 	bool exitQ[4]{}; //exit table | 0-W | 1-D | 2-S | 3-A
 
 public:
@@ -23,10 +24,12 @@ public:
 	int getHpQ();
 	int getTimeQ();
 	int getBeInsideQ();
+	int getEvent();
 	bool getExitQ(int);
 	//setters
 	void setBeInsideQ(int);
 	void setExitQ(int, bool);
+	void setEvent(int);
 
 	~qube();
 };

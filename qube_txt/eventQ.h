@@ -4,7 +4,7 @@
 */
 class eventQ
 {
-	int typeE; //type of event 0-enemy 1-friend 2-box
+	int typeE; //type of event 0-enemy 1-friend 2-box 3-empty room 4-event done
 	int hpE; //endurance of the object
 	int strE; //strength of the object (opponent)
 	int chestHpE; //extra life (box)
@@ -17,16 +17,16 @@ class eventQ
 	void createMob();
 
 public:
-	//getter of keyE variable
+	//getters
 	bool getKey();
-	//creates a new random event
-	void create(int);
+	int getEventType();
+
 	//displays the text info about the event and accepts and displays the interaction key with the event
 	void info(char);
 	//performs actions related to the current event - to comprehend whether int or void and accepted arguments (maybe not necessary)
 	int action(int);
 
-	eventQ();
-	eventQ(int); //determining the difficulty
+	eventQ(int);
+	eventQ(int, int); //determining the difficulty
 	~eventQ();
 };
