@@ -11,6 +11,6 @@ class score_board
 public:
 	score_board();
 	~score_board();
-	//show score board on screen and add on end of score table
+	//show score board on screen and add new score on end of score table
 	void showScoreBoard(int);
 };

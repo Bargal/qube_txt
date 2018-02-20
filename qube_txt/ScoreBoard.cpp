@@ -65,7 +65,7 @@ void score_board::showScoreBoard(const int current)
 		}
 		std::cout << "\nTwoj wynik " << current << " zapewnia ci " << position << " miejsce" << std::endl;
 
-		score[9] = current;
+		if (position <=10)	score[9] = current;
 	}
 	else
 	{
