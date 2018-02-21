@@ -50,4 +50,8 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="score.dat" />
+  </ItemGroup>
 </Project>
